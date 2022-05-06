@@ -1,0 +1,94 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  margin: 15px;
+}
+.header {
+  background-image: linear-gradient(
+    rgba(46, 63, 155, 1),
+    rgba(46, 63, 155, 0.8)
+  );
+  min-height: 80px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+.logo {
+  width: 70px;
+  height: 50px;
+  background-color: #693333;
+}
+#input {
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 3px 3px rgba(5, 5, 5, 0.7), 3px 3px rgb(221, 221, 221) inset;
+  outline: none;
+  border-style: none;
+}
+#input:focus {
+  outline: none;
+  border-style: none;
+}
+.cart {
+  background-color: #9d2c2c;
+  border-radius: 15px;
+  padding: 5px;
+}
+p {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+/*-----------------------------------------------NAV---------------------------------------------------------------------*/
+.container {
+  display: flex;
+  width: 100%;
+}
+.nav {
+  width: 30%;
+  margin-right: 10px;
+  background-image: linear-gradient(
+    rgba(46, 63, 155, 1),
+    rgba(46, 63, 155, 0.8)
+  );
+  border-radius: 15px;
+  height: 200px;
+}
+.main {
+  display: grid;
+  min-height: 70rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, auto);
+  margin: 0;
+  gap: 10px;
+  width: 65%;
+}
+.main > * {
+  background-image: linear-gradient(
+    rgba(46, 63, 155, 1),
+    rgba(46, 63, 155, 0.8)
+  );
+  border-radius: 15px;
+}
+footer {
+  background-image: linear-gradient(
+    rgba(46, 63, 155, 1),
+    rgba(46, 63, 155, 0.8)
+  );
+  min-height: 10vh;
+  border-radius: 15px;
+}
+main {
+  grid-column: 2/4;
+}

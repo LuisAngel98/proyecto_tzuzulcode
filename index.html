@@ -13,31 +13,38 @@
       <input type="search" id="input" placeholder="Buscar producto" />
       <img class="cart" src="./img/cart.svg" alt="cart" />
     </header>
+
     <div class="container">
       <nav class="nav">
-        <p>NAV</p>
+        <h3 class="nav-titulo">Filtros</h3>
+        <div class="primer-filtro">
+          <label for="asc" class="label">Mayor a menor</label>
+          <input type="radio" id="asc" name="radio" />
+        </div>
+        <div class="segundo-filtro">
+          <label for="desc">Menor a mayor</label>
+          <input type="radio" id="desc" name="radio" />
+        </div>
+        <button>Reset</button>
       </nav>
       <main class="main">
-        <article>
-          <p>Articulo1</p>
-        </article>
-        <article>
-          <p>Articulo2</p>
-        </article>
-        <article>
-          <p>Articulo3</p>
-        </article>
-        <article>
-          <p>Articulo4</p>
-        </article>
-        <article>
-          <p>Articulo5</p>
-        </article>
+        <div class="loader"></div>
       </main>
     </div>
     <footer class="footer">
       <p>Pie de pagina</p>
     </footer>
+
+    <template id="template-card">
+      <div class="card-body">
+        <div class="container-card-img">
+          <img src="" alt="" class="card-img" />
+        </div>
+        <h5>Titulos</h5>
+        <p>precio</p>
+        <button class="btn btn-dark">Agregar</button>
+      </div>
+    </template>
     <script src="./index.js" type="module"></script>
   </body>
 </html>

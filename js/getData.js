@@ -3,6 +3,6 @@ const getData = async () => {
     "https://my-json-server.typicode.com/LuisAngel98/DB_JSON/productos"
   );
   const res = await data.json();
-  console.log(res);
+  return res;
 };
 export default getData;

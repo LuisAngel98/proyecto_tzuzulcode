@@ -30,3 +30,6 @@
     box-shadow: 0 0 8px rgb(67, 67, 67);
   }
 }
+@mixin resetButton {
+  border-style: none;
+}

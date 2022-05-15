@@ -12,13 +12,14 @@ html {
 }
 body {
   font-family: v.$fuente_principal;
-  margin: 0 10px;
-  background-color: v.$negro;
+  margin: 10px 10px;
+  background-color: v.$gris;
+  color: v.$negro;
   @include m.desktop {
-    margin: 0 100px;
+    margin: 10px 100px;
   }
   @include m.desktopXL {
-    margin: 0 400px;
+    margin: 10px 400px;
   }
 }
 

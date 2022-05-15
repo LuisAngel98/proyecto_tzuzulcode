@@ -1,0 +1,144 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "SAMSUNG GALAXY Z FLIP 3 NEGRO",
+      "price": 980,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652630350/Samsung-Galaxy-Z-Flip-3-Negro_p2ovud.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652630350/Samsung-Galaxy-Z-Flip-3-Negro-mini_iemgiz.png",
+      "features": {
+        "display": "6.7° Dynamic AMOLED 2X",
+        "SO": "Android 11",
+        "processor": "Octa Core 2.84GHz, 2.4GHz, 1.8GHz",
+        "main camera": "12MP + 12MP",
+        "selfie camera": "10 MP"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Samsung Galaxy S22 5G 128GB",
+      "price": 1071,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652630563/SAMSUNG_GALAXY_S22_5G_PHANTON_BLACK_FRONTAL_276x549_tbdv7w.jpg",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652630566/SAMSUNG-GALAXY-S22-5G-phanton-black-1-min_rq43dj.png",
+      "features": {
+        "display": "6.1° Dynamic AMOLED 2X",
+        "SO": "Android 11",
+        "processor": "Octa-core 1x2.8 GHz X2 3x2.50 GHz 4x1.8 GHz",
+        "main camera": "50MP + 10MP + 12MP",
+        "selfie camera": "10 MP"
+      }
+    },
+    {
+      "id": 3,
+      "title": "XIAOMI 12 5G GRIS ",
+      "price": 980,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631070/PACK-XIAOMI-12-5G-Gris-INC-XIAOMI-BUDS-3-170x316-1_zvfw9n.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631068/PACK-XIAOMI-12-5G-Gris-INC-XIAOMI-BUDS-3-170x316-1-MINI_cq3cl7.png",
+      "features": {
+        "display": "6.28° AMOLED",
+        "SO": "Android 12",
+        "processor": "Qualcomm Snapdragon 8 Gen1 GPU Adreno 730",
+        "main camera": "50MP + 13MP + 5MP",
+        "selfie camera": "20MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    },
+    {
+      "id": 4,
+      "title": "XIAOMI REDMI NOTE 11S 5G 128GB",
+      "price": 329,
+      "img": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631864/Xiaomi-Redmi-Note-11s-negro-1_br5xs3.png",
+      "img-min": "https://res.cloudinary.com/dsl8zromj/image/upload/v1652631862/Xiaomi-Redmi-Note-11s-negro-1-mini_lu98o5.png",
+      "features": {
+        "display": "6.6° IPS LCD",
+        "SO": "Android 11",
+        "processor": "Octa-core 2x2.4GHz 6x2.0GHz",
+        "main camera": "50MP + 8MP + 2MP",
+        "selfie camera": "13MP"
+      }
+    }
+  ]
+}

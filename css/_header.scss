@@ -1,0 +1,40 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: v.$verde;
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem 1rem;
+  @include m.desktop {
+    padding: 1rem 2rem;
+  }
+  .header-logo {
+    width: 50px;
+    height: 50px;
+    @include m.desktop {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  #header-input {
+    padding: 5px 10px;
+    height: 50px;
+    width: 50%;
+    @include m.resetInput;
+    @include m.desktop {
+      font-size: 2rem;
+      height: 80px;
+    }
+  }
+  .header-cart {
+    width: 50px;
+    height: 50px;
+    @include m.desktop {
+      width: 100px;
+      height: 100px;
+    }
+  }
+}

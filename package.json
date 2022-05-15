@@ -1,0 +1,22 @@
+{
+  "name": "tzuzulproyect",
+  "version": "1.0.0",
+  "description": "proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuisAngel98/proyecto_tzuzulcode.git"
+  },
+  "author": "Luis Amgel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuisAngel98/proyecto_tzuzulcode/issues"
+  },
+  "homepage": "https://github.com/LuisAngel98/proyecto_tzuzulcode#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}

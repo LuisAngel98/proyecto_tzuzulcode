@@ -3,6 +3,9 @@
   --color2: #5b8291;
   --color3: #98dad9;
   --color4: #eaebed;
+  --telefono: 480px;
+  --tablet: 768px;
+  --desktop: 1024px;
 }
 html {
   box-sizing: border-box;
@@ -12,6 +15,8 @@ html {
 *,
 *::after,
 *::before {
+  margin: 0;
+  border: 0;
   box-sizing: inherit;
 }
 body {
@@ -20,7 +25,7 @@ body {
 }
 .header {
   background-color: var(--color1);
-  min-height: 100px;
+  height: 100px;
   border-radius: 15px;
   margin-bottom: 10px;
   display: flex;
@@ -29,16 +34,31 @@ body {
   padding: 15px;
 }
 .logo {
-  width: 70px;
+  width: 50px;
   height: 50px;
   background-color: #693333;
+  border-radius: 10px;
 }
 #input {
+  display: block;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 3px 3px rgba(5, 5, 5, 0.7), 3px 3px rgb(221, 221, 221) inset;
   outline: none;
   border-style: none;
+  width: 50%;
+  height: 70%;
+}
+@media (min-width: 1024px) {
+  body {
+    margin: 10px 100px;
+  }
+  .header {
+    height: 200px;
+  }
+  #input {
+    font-size: 3rem;
+  }
 }
 #input:focus {
   outline: none;

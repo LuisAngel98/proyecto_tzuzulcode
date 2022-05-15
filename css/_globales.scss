@@ -1,0 +1,28 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  border-radius: 10px;
+}
+body {
+  font-family: v.$fuente_principal;
+  margin: 0 10px;
+  background-color: v.$negro;
+  @include m.desktop {
+    margin: 0 100px;
+  }
+  @include m.desktopXL {
+    margin: 0 400px;
+  }
+}
+
+.card-img {
+  min-width: 100px;
+  max-width: 200px;
+}

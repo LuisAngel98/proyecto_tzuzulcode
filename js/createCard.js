@@ -1,18 +1,69 @@
-const fragment = document.createDocumentFragment();
-const templateCard = document.getElementById("template-card").content;
-const cards = document.querySelector(".main");
+const main = document.querySelector(".main");
 
-const pintarCard = (data) => {
-  data.forEach((prod) => {
-    console.log(data);
-    templateCard.querySelector("h5").textContent = prod.title;
-    templateCard.querySelector("p").textContent = "$/. " + prod.price;
-    templateCard.querySelector("img").setAttribute("src", prod["img-min"]);
-    templateCard.querySelector(".btn-dark").dataset.id = prod.id;
-    const clon = templateCard.cloneNode(true);
-    fragment.appendChild(clon);
-  });
-  cards.appendChild(fragment);
+let state = [];
+
+const template = () => {
+  let cards = state
+    .map((item) => {
+      return `
+      <div class="card-body">
+        <div class="container-card-img">
+          <img src=${item["img-min"]} class="card-img" />
+        </div>
+        <h5>${item.title}</h5>
+        <p>${item.price}</p>
+        <button class="btn btn-dark" id=${item.id}>Agregar</button>
+      </div>
+      `;
+    })
+    .join("");
+  return cards;
 };
 
-export default pintarCard;
+//renderizar ui
+const render = () => {
+  main.innerHTML = template();
+};
+
+//Actualizar el State
+const setState = (arreglo) => {
+  if (state.length < 1) {
+    state.push.apply(state, arreglo);
+  } else {
+    state = arreglo;
+  }
+  render();
+};
+/*******************************************************************************************************/
+const setStateMayorAMenor = () => {
+  const db = JSON.parse(localStorage.getItem("db"));
+  db.sort((o1, o2) => {
+    if (o1.price > o2.price) {
+      return -1;
+    } else if (o2.price < o1.price) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  localStorage.setItem("db", JSON.stringify(db));
+  setState(db);
+  render();
+};
+const setStateMenorAMayor = () => {
+  const db = JSON.parse(localStorage.getItem("db"));
+  db.sort((o1, o2) => {
+    if (o1.price < o2.price) {
+      return -1;
+    } else if (o2.price > o1.price) {
+      return 1;
+    } else {
+      return 0;
+    }
+  });
+  localStorage.setItem("db", JSON.stringify(db));
+  setState(db);
+  render();
+};
+
+export { setState, setStateMayorAMenor, setStateMenorAMayor };

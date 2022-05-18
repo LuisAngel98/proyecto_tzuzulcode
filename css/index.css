@@ -84,18 +84,11 @@ body {
 
 .container {
   display: flex;
+  justify-content: center;
   margin-top: 1rem;
 }
-.container .nav {
-  width: 30%;
-  background-color: #ff8e3c;
-  padding: 10px;
-  margin-right: 10px;
-}
-.container .nav-titulo {
-  text-align: center;
-}
 .container .main {
+  position: relative;
   width: 65%;
   display: grid;
   place-items: center;
@@ -105,17 +98,106 @@ body {
   background-color: #fffffe;
 }
 
-.nav-filtro1 {
-  background-color: aqua;
-  display: flex;
-  justify-content: space-between;
-}
-
 .card-body {
   padding: 10px;
   border-radius: 15px;
   background: #e0e0e0;
   box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: var(--color2);
+}
+
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.loader:after {
+  border: 10px solid var(--color4);
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.filtros {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: #fffffe;
+  position: relative;
+}
+
+.nav {
+  position: absolute;
+  top: 0;
+  left: -105%;
+  width: 100%;
+  height: 100vh;
+  background-color: #ff8e3c;
+  padding: 10px;
+  margin-right: 10px;
+  z-index: 900;
+  transition: all 0.3s linear;
+}
+
+.nav-titulo {
+  text-align: center;
+}
+
+.nav-filtro {
+  display: flex;
+  justify-content: space-around;
+  background-color: red;
+}
+
+#filtro1 {
+  border-style: none;
+  background-color: #0d0d0d;
+  color: #fffffe;
+  padding: 10px 15px;
+  display: block;
+}
+@media (min-width: 480px) {
+  #filtro1 {
+    display: none;
+  }
+}
+
+.nav-button-reset {
+  border-style: none;
+  background-color: #0d0d0d;
+  color: #fffffe;
+  padding: 10px 15px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -2,17 +2,11 @@
 
 .container {
   display: flex;
+  justify-content: center;
   margin-top: 1rem;
-  .nav {
-    width: 30%;
-    background-color: v.$naranja;
-    padding: 10px;
-    margin-right: 10px;
-  }
-  .nav-titulo {
-    text-align: center;
-  }
+
   .main {
+    position: relative;
     width: 65%;
     display: grid;
     place-items: center;
@@ -22,14 +16,55 @@
     background-color: v.$blanco;
   }
 }
-.nav-filtro1 {
-  background-color: aqua;
-  display: flex;
-  justify-content: space-between;
-}
+
 .card-body {
   padding: 10px;
   border-radius: 15px;
   background: #e0e0e0;
   box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+}
+.loader {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+}
+
+.loader:before,
+.loader:after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 10px solid transparent;
+  border-top-color: var(--color2);
+}
+
+.loader:before {
+  z-index: 100;
+  animation: spin 1s infinite;
+}
+
+.loader:after {
+  border: 10px solid var(--color4);
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }

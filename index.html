@@ -15,20 +15,31 @@
     </header>
     <!--End of header-->
 
-    <div class="container">
+    <div class="filtros">
+      <button id="filtro1">Filtros</button>
+      <select name="select" id="filtros-select">
+        <option value="mayor">Precio mayor a menor</option>
+        <option value="menor">Precio menor a mayor</option>
+      </select>
       <nav class="nav">
         <h3 class="nav-titulo">Filtros</h3>
-        <div class="nav-filtro1">
-          <label for="nav-filtro-asc" class="label">Mayor a menor</label>
-          <input type="radio" id="nav-filtro-asc" name="radio" />
+        <div class="nav-filtro">
+          <input type="checkbox" id="Samsung" name="radio" />
+          <label for="Samsung" class="label">Samsung</label>
         </div>
-        <div class="nav-filtro2">
-          <label for="nav-filtro-desc">Menor a mayor</label>
-          <input type="radio" id="nav-filtro-desc" name="radio" />
+        <div class="nav-filtro">
+          <input type="checkbox" id="Xiaomi" name="radio" />
+          <label for="Xiaomi">Xiaomi</label>
         </div>
-        <button class="nav-button-reset">Reset</button>
+        <div class="nav-filtro">
+          <input type="checkbox" id="Iphone" name="radio" />
+          <label for="Iphone">Iphone</label>
+        </div>
+        <button class="nav-button-reset">Filtrar</button>
       </nav>
+    </div>
 
+    <div class="container">
       <main class="main">
         <div class="loader"></div>
       </main>
@@ -39,7 +50,7 @@
       <p>Pie de pagina</p>
     </footer>
 
-    <template id="template-card">
+    <!-- <template id="template-card">
       <div class="card-body">
         <div class="container-card-img">
           <img src="" alt="" class="card-img" />
@@ -48,7 +59,7 @@
         <p>precio</p>
         <button class="btn btn-dark">Agregar</button>
       </div>
-    </template>
+    </template> -->
     <script src="./index.js" type="module"></script>
   </body>
 </html>

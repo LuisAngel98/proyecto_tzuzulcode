@@ -1,0 +1,44 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+#btn-cart {
+  position: relative;
+  border-style: none;
+  cursor: pointer;
+}
+#cart-content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 50vh;
+  height: auto;
+  background-color: v.$gris;
+  z-index: 999;
+  padding: 15px;
+  table,
+  tr,
+  td {
+    border-collapse: collapse;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+    }
+  }
+  table {
+    width: 100%;
+    background-color: v.$blanco;
+    td,
+    th {
+      padding: 5px 5px;
+    }
+    #addItem,
+    #deleteItem,
+    #vaciarItem {
+      border-style: none;
+      padding: 5px 10px;
+    }
+    tfoot {
+      border-top: 1px black solid;
+    }
+  }
+}

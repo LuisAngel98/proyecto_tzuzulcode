@@ -11,7 +11,31 @@
     <header class="header">
       <img class="header-logo" src="./img/logo sin fondo.png" alt="logo" />
       <input type="search" id="header-input" placeholder="Buscar producto" />
-      <img class="header-cart" src="./img/cart.svg" alt="cart" />
+      <button id="btn-cart">
+        <img class="header-cart" src="./img/cart.svg" alt="cart" />
+        <div id="cart-content">
+          <table>
+            <thead id="cartItem">
+              <tr>
+                <td><img src="" alt="xd" /></td>
+                <td>Nombre</td>
+                <td>1</td>
+                <td><button id="addItem">+</button></td>
+                <td><button id="deleteItem">-</button></td>
+                <td>200</td>
+              </tr>
+            </thead>
+            <tfoot>
+              <tr>
+                <th colspan="2">Total productos</th>
+                <td colspan="1">10</td>
+                <td colspan="2"><button id="vaciarItem">vaciar</button></td>
+                <td colspan="1">1000</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </button>
     </header>
     <!--End of header-->
 
@@ -50,16 +74,6 @@
       <p>Pie de pagina</p>
     </footer>
 
-    <!-- <template id="template-card">
-      <div class="card-body">
-        <div class="container-card-img">
-          <img src="" alt="" class="card-img" />
-        </div>
-        <h5>Titulos</h5>
-        <p>precio</p>
-        <button class="btn btn-dark">Agregar</button>
-      </div>
-    </template> -->
     <script src="./index.js" type="module"></script>
   </body>
 </html>

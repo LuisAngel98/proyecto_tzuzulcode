@@ -177,7 +177,6 @@ body {
 .nav-filtro {
   display: flex;
   justify-content: space-around;
-  background-color: red;
 }
 
 #filtro1 {
@@ -198,6 +197,52 @@ body {
   background-color: #0d0d0d;
   color: #fffffe;
   padding: 10px 15px;
+}
+
+#btn-cart {
+  position: relative;
+  border-style: none;
+  cursor: pointer;
+}
+
+#cart-content {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 50vh;
+  height: auto;
+  background-color: #eff0f3;
+  z-index: 999;
+  padding: 15px;
+}
+#cart-content table,
+#cart-content tr,
+#cart-content td {
+  border-collapse: collapse;
+}
+#cart-content table img,
+#cart-content tr img,
+#cart-content td img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+#cart-content table {
+  width: 100%;
+  background-color: #fffffe;
+}
+#cart-content table td,
+#cart-content table th {
+  padding: 5px 5px;
+}
+#cart-content table #addItem,
+#cart-content table #deleteItem,
+#cart-content table #vaciarItem {
+  border-style: none;
+  padding: 5px 10px;
+}
+#cart-content table tfoot {
+  border-top: 1px black solid;
 }
 
 /*# sourceMappingURL=index.css.map */

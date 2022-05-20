@@ -19,13 +19,16 @@
   margin-right: 10px;
   z-index: 900;
   transition: all 0.3s linear;
+  text-align: center;
 }
 .nav-titulo {
   text-align: center;
+  font-size: 32px;
 }
 .nav-filtro {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  font-size: 32px;
 }
 #filtro1 {
   @include m.resetButton;
@@ -36,4 +39,10 @@
 }
 .nav-button-reset {
   @include m.resetButton;
+  font-size: 32px;
+  margin-top: 20px;
+}
+#filtros-select {
+  padding: 10px 20px;
+  font-size: 24px;
 }

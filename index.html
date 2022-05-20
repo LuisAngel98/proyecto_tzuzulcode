@@ -11,31 +11,32 @@
     <header class="header">
       <img class="header-logo" src="./img/logo sin fondo.png" alt="logo" />
       <input type="search" id="header-input" placeholder="Buscar producto" />
-      <button id="btn-cart">
+      <div id="group">
         <img class="header-cart" src="./img/cart.svg" alt="cart" />
-        <div id="cart-content">
+        <div id="cart-content" class="cerrarCart">
           <table>
             <thead id="cartItem">
-              <tr>
+              <!-- <tr>
                 <td><img src="" alt="xd" /></td>
                 <td>Nombre</td>
                 <td>1</td>
                 <td><button id="addItem">+</button></td>
                 <td><button id="deleteItem">-</button></td>
                 <td>200</td>
-              </tr>
+              </tr> -->
             </thead>
             <tfoot>
               <tr>
                 <th colspan="2">Total productos</th>
-                <td colspan="1">10</td>
+                <td colspan="1" id="td-cantidad">10</td>
                 <td colspan="2"><button id="vaciarItem">vaciar</button></td>
-                <td colspan="1">1000</td>
+                <td colspan="1" id="td-total">1000</td>
               </tr>
             </tfoot>
           </table>
         </div>
-      </button>
+        <button id="btn-cart"></button>
+      </div>
     </header>
     <!--End of header-->
 

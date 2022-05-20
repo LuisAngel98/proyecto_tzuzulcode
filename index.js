@@ -6,11 +6,8 @@ import {
 import getData from "./js/getData.js";
 import loading from "./js/loading.js";
 import media from "./js/mediaQuery.js";
-import {
-  template,
-  deleteItemFromCart,
-  addItemToCart,
-} from "./js/createCart.js";
+import { render, stateCart, addItemToCart } from "./js/createCart.js";
+
 const btnOnClick = (btns) => {
   btns.forEach((btn) => {
     btn.onclick = (e) => {
@@ -18,6 +15,8 @@ const btnOnClick = (btns) => {
     };
   });
 };
+
+document.addEventListener("DOMContentLoaded", render);
 
 getData().then((data) => {
   localStorage.setItem("db", JSON.stringify(data));
@@ -40,4 +39,31 @@ filtrosSelect.onchange = (e) => {
   } else {
     setStateMenorAMayor();
   }
+};
+/***/
+window.addItemToCartGlobal = (id) => {
+  let validar = stateCart.items.some((item) => item.id == id);
+  if (validar) {
+    // si ya existe solo cambiar su cantidad
+    let index = stateCart.items.findIndex((i) => i.id == id);
+    stateCart.items[index].qty += 1;
+    render();
+  } else {
+    let localDB = JSON.parse(localStorage.getItem("db"));
+    let data = localDB.find((item) => item.id == id);
+    stateCart.items.push(data);
+    render();
+  }
+};
+window.deleteItemFromCart = (id) => {
+  let index = stateCart.items.findIndex((i) => i.id == id);
+  stateCart.items[index].qty -= 1;
+
+  render();
+};
+
+const btnCart = document.getElementById("btn-cart");
+const cartContent = document.getElementById("cart-content");
+btnCart.onclick = (e) => {
+  cartContent.classList.toggle("cerrarCart");
 };

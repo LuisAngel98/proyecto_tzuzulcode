@@ -1,6 +1,10 @@
 const main = document.querySelector(".main");
 
-let state = [];
+if (localStorage.getItem("db")) {
+  var state = JSON.parse(localStorage.getItem("db"));
+} else {
+  var state = [];
+}
 
 const template = () => {
   let cards = state
@@ -11,7 +15,7 @@ const template = () => {
           <img src=${item["img-min"]} class="card-img" />
         </div>
         <h5>${item.title}</h5>
-        <p>${item.price}</p>
+        <p>$/. ${item.price}.00</p>
         <button class="btn btn-dark" id=${item.id}>Agregar</button>
       </div>
       `;
@@ -23,6 +27,7 @@ const template = () => {
 //renderizar ui
 const render = () => {
   main.innerHTML = template();
+  localStorage.setItem("db", JSON.stringify(state));
 };
 
 //Actualizar el State
@@ -36,8 +41,7 @@ const setState = (arreglo) => {
 };
 /*******************************************************************************************************/
 const setStateMayorAMenor = () => {
-  const db = JSON.parse(localStorage.getItem("db"));
-  db.sort((o1, o2) => {
+  state.sort((o1, o2) => {
     if (o1.price > o2.price) {
       return -1;
     } else if (o2.price < o1.price) {
@@ -46,13 +50,10 @@ const setStateMayorAMenor = () => {
       return 0;
     }
   });
-  localStorage.setItem("db", JSON.stringify(db));
-  setState(db);
   render();
 };
 const setStateMenorAMayor = () => {
-  const db = JSON.parse(localStorage.getItem("db"));
-  db.sort((o1, o2) => {
+  state.sort((o1, o2) => {
     if (o1.price < o2.price) {
       return -1;
     } else if (o2.price > o1.price) {
@@ -61,8 +62,6 @@ const setStateMenorAMayor = () => {
       return 0;
     }
   });
-  localStorage.setItem("db", JSON.stringify(db));
-  setState(db);
   render();
 };
 

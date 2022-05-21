@@ -1,11 +1,8 @@
-const main = document.querySelector(".main");
+const main = document.querySelector(".main"); //nodo donde se renderiza todo
 
-if (localStorage.getItem("db")) {
-  var state = JSON.parse(localStorage.getItem("db"));
-} else {
-  var state = [];
-}
+let state = []; //ESTADO QUE SE RENDERIZA
 
+//crear template a partir del estado
 const template = () => {
   let cards = state
     .map((item) => {
@@ -15,8 +12,8 @@ const template = () => {
           <img src=${item["img-min"]} class="card-img" />
         </div>
         <h5>${item.title}</h5>
-        <p>$/. ${item.price}.00</p>
-        <button class="btn btn-dark" id=${item.id}>Agregar</button>
+        <p>${item.price}</p>
+        <button onclick="addItemToCartGlobal(this.id)" class="btn btn-dark" id=${item.id}>Agregar</button>
       </div>
       `;
     })
@@ -24,24 +21,23 @@ const template = () => {
   return cards;
 };
 
-//renderizar ui
+//renderizar el template
 const render = () => {
   main.innerHTML = template();
-  localStorage.setItem("db", JSON.stringify(state));
 };
 
 //Actualizar el State
-const setState = (arreglo) => {
+const setState = (data) => {
   if (state.length < 1) {
-    state.push.apply(state, arreglo);
+    state.push.apply(state, data);
   } else {
-    state = arreglo;
+    state = data;
   }
   render();
 };
-/*******************************************************************************************************/
-const setStateMayorAMenor = () => {
-  state.sort((o1, o2) => {
+//Actualizar el State de mayor a menor
+const setStateMayorAMenor = (data) => {
+  data.sort((o1, o2) => {
     if (o1.price > o2.price) {
       return -1;
     } else if (o2.price < o1.price) {
@@ -50,10 +46,12 @@ const setStateMayorAMenor = () => {
       return 0;
     }
   });
+  state = data;
   render();
 };
-const setStateMenorAMayor = () => {
-  state.sort((o1, o2) => {
+//Actualizar el State de menor a meyor
+const setStateMenorAMayor = (data) => {
+  data.sort((o1, o2) => {
     if (o1.price < o2.price) {
       return -1;
     } else if (o2.price > o1.price) {
@@ -62,6 +60,7 @@ const setStateMenorAMayor = () => {
       return 0;
     }
   });
+  state = data;
   render();
 };
 
